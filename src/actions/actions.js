@@ -1,7 +1,7 @@
 import * as types from "./actionTypes";
 const baseUrl =
   process.env.NODE_ENV === "production"
-    ? process.env.ASTRRISK_SERVER_DOMAIN
+    ? process.env.REACT_APP_ASTRRISK_SERVER_DOMAIN
     : "http://localhost:3001";
 
 export const getNeoData = (date) => {
