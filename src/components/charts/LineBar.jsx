@@ -1,15 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import {
-  spring,
-  Motion,
-  StaggeredMotion,
-  TransitionMotion,
-  presets,
-} from "react-motion";
 import * as d3 from "d3";
-import { closePopUp, showNeoPopUp } from "../../actions/actions.js";
 
 class LineBar extends Component {
   render() {
@@ -39,6 +31,7 @@ class LineBar extends Component {
         </div>
         <div className="line-bar-container">
           <img
+            alt="line-bar-asteroid"
             className="line-bar-asteroid"
             src="../assets/images/meteor.svg"
             style={{ marginLeft: dinosaurEnergyScale(mt) }}
@@ -49,7 +42,12 @@ class LineBar extends Component {
             className="line-bar-image"
             style={{ marginLeft: dinosaurEnergyScale(tsarBomba) }}
           >
-            <img src="../assets/images/tsar.svg" width={70} height={50} />
+            <img
+              alt="tsar-bomba"
+              src="../assets/images/tsar.svg"
+              width={70}
+              height={50}
+            />
             <p>Tsar Bomba Nuke</p>
             <p>(50 Mt)</p>
           </div>
@@ -57,7 +55,12 @@ class LineBar extends Component {
             className="line-bar-image"
             style={{ marginLeft: dinosaurEnergyScale(fatMan) }}
           >
-            <img src="../assets/images/fman.svg" width={50} height={50} />
+            <img
+              alt="fman"
+              src="../assets/images/fman.svg"
+              width={50}
+              height={50}
+            />
             <p>Fat Man Atomic Bomb</p>
             <p>(0.021 Mt)</p>
           </div>
@@ -65,7 +68,12 @@ class LineBar extends Component {
             className="line-bar-image"
             style={{ marginLeft: dinosaurEnergyScale(dinosaurKiller) }}
           >
-            <img src="../assets/images/extinction.svg" width={50} height={50} />
+            <img
+              alt="extinction"
+              src="../assets/images/extinction.svg"
+              width={50}
+              height={50}
+            />
             <p>Dinosaur Extinction Event</p>
             <p className="dino-text">({dinoFormat} Mt)</p>
           </div>

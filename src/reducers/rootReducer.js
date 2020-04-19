@@ -1,18 +1,17 @@
-import { combineReducers } from 'redux';
-import { 
-  testReducer, 
-  neoDataReducer, 
-  fireBallDataReducer, 
-  dateReducer, 
-  getSliderReducer, 
-  togglePopUpReducer, 
-  toggleFireballReducer, 
-  annualDataReducer, 
-  singleNeoDataReducer, 
-  showPopUpReducer, 
-  toggleHeatMapReducer, 
-  toggleNeoPopUpReducer, 
-  toggleDangerBarReducer } from './reducers';
+import { combineReducers } from "redux";
+import {
+  neoDataReducer,
+  fireBallDataReducer,
+  dateReducer,
+  getSliderReducer,
+  togglePopUpReducer,
+  toggleFireballReducer,
+  annualDataReducer,
+  singleNeoDataReducer,
+  toggleHeatMapReducer,
+  toggleNeoPopUpReducer,
+  toggleDangerBarReducer,
+} from "./reducers";
 
 const rootReducer = combineReducers({
   neoData: neoDataReducer,
@@ -25,7 +24,7 @@ const rootReducer = combineReducers({
   showPopUp: togglePopUpReducer,
   showHeatMap: toggleHeatMapReducer,
   showNeoPopUp: toggleNeoPopUpReducer,
-  showDangerBar: toggleDangerBarReducer
-})
+  showDangerBar: toggleDangerBarReducer,
+});
 
 export default rootReducer;

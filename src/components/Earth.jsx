@@ -2,14 +2,10 @@ import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import {
-  testButton,
   getNeoData,
   getFireballData,
-  showNeoData,
   showHeatMapPopUp,
 } from "../actions/actions.js";
-import * as d3 from "d3";
-import moment from "moment";
 
 class Earth extends Component {
   constructor() {
@@ -25,6 +21,7 @@ class Earth extends Component {
     return (
       <Fragment>
         <img
+          alt="earth"
           src="../assets/images/earth.svg"
           className="earth"
           onMouseEnter={(e) => {

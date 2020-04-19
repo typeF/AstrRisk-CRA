@@ -2,13 +2,6 @@ import React, { Component, Fragment } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import {
-  spring,
-  Motion,
-  StaggeredMotion,
-  TransitionMotion,
-  presets,
-} from "react-motion";
-import {
   getAnnualNeoData,
   getNeoData,
   closePopUp,
@@ -42,28 +35,11 @@ class HeatMap extends Component {
       width = 1400 - margin.left - margin.right,
       height = 800 - margin.top - margin.bottom;
 
-    const axisTicks = [
-      "",
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
-
     // Provides node for D3 to hook onto
     const heatMapNode = this.refs.heatMap;
     const g = d3.select(heatMapNode);
 
     const gridSize = Math.floor(width / 31),
-      bucket = 8,
       colors = [
         "#3288bd",
         "#66c2a5",
@@ -135,9 +111,8 @@ class HeatMap extends Component {
     // Scaler for assigning values to a color
     const colorScale = d3.scaleQuantile().domain([0, 14]).range(colors);
 
-    // Y-Axis
-    const yAxis = g
-      .selectAll(".heatmap-yAxis")
+    // Generate Y-Axis
+    g.selectAll(".heatmap-yAxis")
       .data(months)
       .enter()
       .append("text")
@@ -151,9 +126,8 @@ class HeatMap extends Component {
       .attr("transform", "translate(" + -10 + "," + 25 + ")")
       .attr("class", "heatmap-axis");
 
-    // X-Axis
-    const xAxis = g
-      .selectAll(".heatmap-xAxis")
+    // Generate X-Axis
+    g.selectAll(".heatmap-xAxis")
       .data(days)
       .enter()
       .append("text")
@@ -171,7 +145,7 @@ class HeatMap extends Component {
     const legendNode = d3.select(heatMapNode);
 
     // Generates legend labels
-    const legends = legendNode
+    legendNode
       .selectAll(".heatmap-legend")
       .data(legendLabels)
       .enter()
@@ -187,8 +161,7 @@ class HeatMap extends Component {
       .attr("class", "heatmap-legend-text");
 
     // Generates the legend description
-    const legendTitle = d3
-      .select(heatMapNode)
+    d3.select(heatMapNode)
       .append("text")
       .text("Number of NEOs near Earth")
       .attr("transform", "translate(" + 120 + "," + (height - 50) + ")")

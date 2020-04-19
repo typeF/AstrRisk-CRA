@@ -1,17 +1,12 @@
-import React, { Component, Fragment } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import * as d3 from 'd3';
-import RadarChart from './charts/RadarChart.jsx';
-import BarChart from './charts/BarChart.jsx';
-import * as MdIconPack from 'react-icons/lib/md'
-import { closePopUp, showNeoPopUp  } from '../actions/actions.js'
-import HeatMap from './charts/HeatMap.jsx';
-import NeoPopUp from './NeoPopUp.jsx';
-
+import React, { Component, Fragment } from "react";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import * as MdIconPack from "react-icons/lib/md";
+import { closePopUp } from "../actions/actions.js";
+import HeatMap from "./charts/HeatMap.jsx";
+import NeoPopUp from "./NeoPopUp.jsx";
 
 class PopUp extends Component {
-
   render() {
     const { showNeoPopUp, showHeatMap } = this.props;
 
@@ -21,7 +16,10 @@ class PopUp extends Component {
           <div className="infoPopupContainer">
             <div className="infoPopup-infoHolder">
               <div className="x-button">
-                <MdIconPack.MdClear size={80} onClick={e => this.props.closePopUp()} />
+                <MdIconPack.MdClear
+                  size={80}
+                  onClick={(e) => this.props.closePopUp()}
+                />
               </div>
               <div className="neo-popup-container">
                 {showNeoPopUp && <NeoPopUp />}
@@ -31,20 +29,19 @@ class PopUp extends Component {
           </div>
         </div>
       </Fragment>
-    )
+    );
   }
 }
 
 function mapStateToProps(state) {
   return {
     showNeoPopUp: state.showNeoPopUp,
-    showHeatMap: state.showHeatMap
-  }
+    showHeatMap: state.showHeatMap,
+  };
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ closePopUp
-  }, dispatch)
+  return bindActionCreators({ closePopUp }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(PopUp);

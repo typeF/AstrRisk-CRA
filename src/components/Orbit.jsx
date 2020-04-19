@@ -1,7 +1,5 @@
 import React, { Component, Fragment } from "react";
-import Earth from "./Earth.jsx";
 import Neo from "./Neo.jsx";
-import Fireball from "./Fireball.jsx";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import FireballAlert from "./FireballAlert.jsx";
@@ -29,6 +27,7 @@ class Orbit extends Component {
         <div className="moon-orbit">
           <div className="moon">
             <img
+              alt="moon"
               src="../assets/images/moon.svg"
               className="moonimage"
               onMouseEnter={(e) => {
@@ -45,6 +44,7 @@ class Orbit extends Component {
         </div>
         <div className="orbit">
           <img
+            alt="orbit"
             src="../assets/images/mars.svg"
             className="mars"
             onClick={this.handleClick}

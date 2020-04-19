@@ -9,16 +9,9 @@ import {
 } from "../actions/actions.js";
 import moment from "moment";
 import { extendMoment } from "moment-range";
-import {
-  spring,
-  Motion,
-  StaggeredMotion,
-  TransitionMotion,
-  presets,
-} from "react-motion";
+import { spring, Motion } from "react-motion";
 import FireballNotification from "./FireballNotification.jsx";
 import * as FontAwesome from "react-icons/lib/fa";
-import * as TiIconPack from "react-icons/lib/ti";
 import * as MdIconPack from "react-icons/lib/md";
 import uuid from "uuid/v1";
 

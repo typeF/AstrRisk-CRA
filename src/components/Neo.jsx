@@ -2,10 +2,7 @@ import React, { Component, Fragment } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import * as d3 from "d3";
-import RadarChart from "./charts/RadarChart.jsx";
-import BarChart from "./charts/BarChart.jsx";
-import * as MdIconPack from "react-icons/lib/md";
-import { showPopUp, showNeoPopUp } from "../actions/actions.js";
+import { showNeoPopUp } from "../actions/actions.js";
 
 class Neo extends Component {
   constructor(props) {
@@ -28,11 +25,8 @@ class Neo extends Component {
     const mass = Math.floor(2 * volume);
     const ke = 0.5 * mass * Math.pow(speed, 2);
     const mt = +(ke * 0.00000000023901).toFixed(3);
-    const tScale = d3.scaleLinear().domain([0, 20000]).range([50, 8]);
-    const time = tScale(speed);
     name = "A" + name.replace(/\s/g, "").replace(/[{()}]/g, "");
     const dScale = d3.scaleLinear().domain([6371, 54600000]).range([280, 1400]);
-    const sizeScale = d3.scaleLinear().domain([]);
     const scaledDistance = Math.floor(dScale(distance));
     const randomDeg = Math.pow(avgDiameter, 2);
     // const plusOrMinus = avgDiameter < 200 ? -1 : 1;
@@ -109,7 +103,6 @@ class Neo extends Component {
     function randomImage() {
       if (name === "ATesla") return "../assets/images/tesla.svg";
       let image = "../assets/images/meteor2.svg";
-      const imageScale = d3.scaleLinear().domain([3, 35]).range([1, 5]);
       if (speed <= 5) {
         image = "../assets/images/meteor2.svg";
       } else if (speed > 5 && speed < 8) {
@@ -134,7 +127,6 @@ class Neo extends Component {
         mt,
         mass,
         neoName,
-        hazard,
       };
       const classNames = `${name + 1}`;
       return (
@@ -146,6 +138,7 @@ class Neo extends Component {
           <div className={name}>
             <div className="neo">
               <img
+                alt="random-neo"
                 src={randomImage()}
                 onClick={(e) => {
                   this.props.showNeoPopUp(singleNeoData);

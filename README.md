@@ -14,13 +14,17 @@ Radar and danger charts provide easy to digest information about individual NEOs
 
 # Screenshots
 
-![Main Page](https://github.com/typeF/AstrRisk/blob/master/docs/Main%20Screen%20SS.png?raw=true)
+![Main Page](https://github.com/typeF/AstrRisk-CRA/blob/master/docs/Main%20Screen%20SS.png?raw=true)
 
-![Radar Chart](https://github.com/typeF/AstrRisk/blob/master/docs/Radar%20Chart%20SS.png?raw=true)
+![Radar Chart](https://github.com/typeF/AstrRisk-CRA/blob/master/docs/Radar%20Chart%20SS.png?raw=true)
 
-![Danger Chart](https://github.com/typeF/AstrRisk/blob/master/docs/Danger%20Chart%20SS.png?raw=true)
+![Danger Chart](https://github.com/typeF/AstrRisk-CRA/blob/master/docs/Danger%20Chart%20SS.png?raw=true)
 
-![Heat Map](https://github.com/typeF/AstrRisk/blob/master/docs/Heat%20Map%20SS.png?raw=true)
+![Heat Map](https://github.com/typeF/AstrRisk-CRA/blob/master/docs/Heat%20Map%20SS.png?raw=true)
+
+# Create-React-App Refactor
+
+Refactored application to run off CRA instead of the initial boilerplate
 
 # Production client deployment setup
 
@@ -28,5 +32,5 @@ Radar and danger charts provide easy to digest information about individual NEOs
 - Set enviroment variables
 
 ```
-ASTRRISK_SERVER_DOMAIN=YOUR_SERVER_ADDRESS
+REACT_APP_ASTRRISK_SERVER_DOMAIN=YOUR_SERVER_ADDRESS
 ```
