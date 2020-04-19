@@ -22,19 +22,11 @@ Radar and danger charts provide easy to digest information about individual NEOs
 
 ![Heat Map](https://github.com/typeF/AstrRisk/blob/master/docs/Heat%20Map%20SS.png?raw=true)
 
-# Production deployment setup
+# Production client deployment setup
 
-- Clone repo to server
-- Install Docker + Docker Compose
-- Download [JSON data package](https://www.dropbox.com/s/lltz9sv8xtj37kn/json.zip?dl=0) to /api_server
-- Unzip json.zip to /api_server/json
-- Set the following environment variables
-  - NODE_ENV=production
-  - ASTRRISK_CLIENT_DOMAIN=YOUR_CLIENT_DOMAIN
-  - ASTRRISK_SERVER_DOMAIN=YOUR_SERVER_DOMAIN
-- Clone [nginx-proxy](https://github.com/typeF/nginx-proxy) to a separate folder and follow setup
-- Run nginx-proxy and Astrrisk docker-compose files
+- Push to platform of choice
+- Set enviroment variables
 
 ```
-docker-compose up -d
+ASTRRISK_SERVER_DOMAIN=YOUR_SERVER_ADDRESS
 ```
