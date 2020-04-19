@@ -1,68 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Contributors
 
-## Available Scripts
+[Blake Sadoway](https://github.com/Bsadoway) |
+[Clayton Savage](https://github.com/claytonsavage) |
+[Frank Lam](https://github.com/typeF)
 
-In the project directory, you can run:
+# AstrRisk
 
-### `yarn start`
+AstrRisk is a data visualization app that allows users to view Near Earth Objects (NEOs) that are between Mars and Earth on any given day.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Features a custom-made browsing UI built with CSS3 and D3js. Users can browse through 300 years worth of information dating back to 1900 and all the way up to 2200 based on NASA's predictions.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Radar and danger charts provide easy to digest information about individual NEOs. Heatmaps allow user to see an overview of each year's NEO density's at a glance and to quickly navigate to a particular day.
 
-### `yarn test`
+# Screenshots
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Main Page](https://github.com/typeF/AstrRisk/blob/master/docs/Main%20Screen%20SS.png?raw=true)
 
-### `yarn build`
+![Radar Chart](https://github.com/typeF/AstrRisk/blob/master/docs/Radar%20Chart%20SS.png?raw=true)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Danger Chart](https://github.com/typeF/AstrRisk/blob/master/docs/Danger%20Chart%20SS.png?raw=true)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+![Heat Map](https://github.com/typeF/AstrRisk/blob/master/docs/Heat%20Map%20SS.png?raw=true)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Production deployment setup
 
-### `yarn eject`
+- Clone repo to server
+- Install Docker + Docker Compose
+- Download [JSON data package](https://www.dropbox.com/s/lltz9sv8xtj37kn/json.zip?dl=0) to /api_server
+- Unzip json.zip to /api_server/json
+- Set the following environment variables
+  - NODE_ENV=production
+  - ASTRRISK_CLIENT_DOMAIN=YOUR_CLIENT_DOMAIN
+  - ASTRRISK_SERVER_DOMAIN=YOUR_SERVER_DOMAIN
+- Clone [nginx-proxy](https://github.com/typeF/nginx-proxy) to a separate folder and follow setup
+- Run nginx-proxy and Astrrisk docker-compose files
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```
+docker-compose up -d
+```
