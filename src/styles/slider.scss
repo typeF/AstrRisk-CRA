@@ -1,0 +1,231 @@
+/* Made from http://danielstern.ca/range.css/?ref=css-tricks#/ */
+
+$yearPickerValue: 550px;
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+.range-slider {
+  position: fixed;
+  color: #FFF;
+  width: 1200px;
+  margin-left: -600px;
+  margin-right: auto;
+  padding-bottom: 40px;
+  z-index: 9000;
+  left: 50%;
+  bottom: 10px;
+}
+
+.range-slider-date {
+  font-size: 50px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.range-text {
+  padding-top: 45px;
+  user-select: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.range-button {
+  pointer-events: auto;
+  margin-top: 85px;
+  cursor: pointer;
+  transition: width 2s;
+}
+
+.range-button:hover {
+  color: yellow;
+  transform: scale(1.2);
+}
+
+.range-hidden {
+  display: none;
+}
+
+.range-text-link {
+  pointer-events: auto;
+  position: absolute;
+  margin-left: $yearPickerValue;
+  user-select: none;
+
+  a {
+    pointer-events: auto;
+
+    color: #FFF;
+    text-decoration: none;
+  }
+  a:hover {
+    color: rgb(255, 255, 0);
+    transition: .5s ease-in-out;
+    text-shadow: 3px 3px #000;
+  }
+}
+
+.dropdown-icon {
+  position: absolute;
+  left: 683px;
+  top: 10px;
+  transform: rotate(-45deg);
+}
+
+.range-year-picker {
+  pointer-events: auto;
+  position: absolute;
+  height: 150px;
+  bottom: 175px;
+  overflow-y: scroll;
+  padding-left: $yearPickerValue;
+
+  div {
+    pointer-events: auto;
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1em;
+    color: #FFF;
+
+
+    &:hover {
+      color: rgb(255, 255, 0);
+      transition: .5s ease-in-out;
+      text-shadow: 3px 3px #000;
+    }
+  }
+}
+
+.range-slider-months {
+
+
+  li {
+    font-family: 'Roboto Mono', monospace;
+    user-select: none;
+    float: left;
+    padding: 0 35px;
+  }
+  input {
+    pointer-events: auto;
+
+  }
+}
+
+input[type=range] {
+  pointer-events: auto;
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 17.8px 0;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0 0 1px #0d0d0d;
+  background: #fffff4;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1.5px 1.5px 1px rgba(0, 0, 0, 0.57), 0 0 1.5px rgba(13, 13, 13, 0.57);
+  border: 0.6px solid #000000;
+  height: 44px;
+  width: 44px;
+  border-radius: 44px;
+  background: #00ffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -18px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #ffffff;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0 0 1px #0d0d0d;
+  background: #fffff4;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1.5px 1.5px 1px rgba(0, 0, 0, 0.57), 0 0 1.5px rgba(13, 13, 13, 0.57);
+  border: 0.6px solid #000000;
+  height: 44px;
+  width: 44px;
+  border-radius: 44px;
+  background: #00ffff;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #ffffdb;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0 0 1px #0d0d0d;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #fffff4;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0 0 1px #0d0d0d;
+}
+
+input[type=range]::-ms-thumb {
+  box-shadow: 1.5px 1.5px 1px rgba(0, 0, 0, 0.57), 0 0 1.5px rgba(13, 13, 13, 0.57);
+  border: 0.6px solid #000000;
+  height: 44px;
+  width: 44px;
+  border-radius: 44px;
+  background: #00ffff;
+  cursor: pointer;
+  height: 8.4px;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #fffff4;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #ffffff;
+}
+
+.select {
+  background: rgba(0,0,0,0.1);
+  color: white;
+  border: none;
+}
+
+.select:focus {
+  outline: none;
+}
+
+.fireball-slider-notification {
+  position: absolute;
+  bottom: 63px;
+  left: 50%;
+  margin-left: -600px;
+}

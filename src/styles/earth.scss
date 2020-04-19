@@ -1,0 +1,48 @@
+.earth {
+  pointer-events: auto;
+  position: absolute;
+  left: 640px;
+  top: 650px;
+  width: 120px;
+  transform: rotateX(-57deg);
+  cursor: pointer;
+  transition: 0.5s;
+  padding-bottom: 90px;
+  animation-duration: 1s;
+  animation-name: wobble;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.earth:hover {
+    transform: scale(1.3) rotateX(-54deg);
+}
+
+@keyframes wobble {
+  from {
+    margin-top: 5px;
+  }
+
+  to {
+    margin-top: -5px;
+  }
+}
+
+#earthpopup {
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  width: 200px;
+  margin-left: -100px;
+  transform: rotateX(-57deg);
+  text-align: center;
+  font-size: 60px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+#earthpopup.hidden {
+  opacity: 0;
+  transition: all 1s linear;
+}

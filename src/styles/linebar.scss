@@ -1,0 +1,41 @@
+.line-bar-container {
+  position: absolute;
+  top: 142px;
+  left: -112px;
+  font-family: "Roboto Mono", monospace;
+}
+
+.line-bar-container p {
+  width: 110px;
+}
+
+.infoText-line-bar {
+  font-family: "Roboto Mono", monospace;
+  font-size: 2.3em;
+  position: absolute;
+  top: 62px;
+  left: -135px;
+}
+
+.dino-text{
+  left: -75px;
+  position: absolute;
+  width: 260px!important;
+}
+
+.line-bar-initial {
+  fill: #FFF;
+}
+
+.line-bar-dino {
+  fill: #FFF;
+}
+
+.line-bar-asteroid {
+  position: absolute;
+  top: 15px;
+}
+.line-bar-image {
+  position: absolute;
+  top: 100px;
+}

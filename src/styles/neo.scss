@@ -1,0 +1,41 @@
+.neo {
+  pointer-events: auto;
+  cursor: pointer;
+  animation-duration: 1s;
+  animation-name: wobble;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  &:hover {
+    animation-play-state: paused;
+  }
+  img {
+    border-radius: 30%;
+    &:hover {
+      transition: 0.7s ease;
+      border: 5px solid #fff;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+    }
+  }
+}
+
+.neo:hover {
+  animation-play-state: paused;
+}
+
+@keyframes wobble {
+  from {
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+
+  to {
+    margin-right: -10px;
+    margin-top: -10px;
+  }
+}
+
+.ATesla1 {
+  margin-left: -100px;
+}

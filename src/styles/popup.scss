@@ -1,0 +1,91 @@
+.info-bg{
+  position: absolute;
+  background: rgba(0, 0, 0, 0.95);
+  top: 0;
+  bottom: 0;
+  left: -300px;
+  right: -300px;
+  z-index: 9999;
+}
+
+.infoPopupContainer {
+  pointer-events: none;
+  top: 22%;
+  left: 50%;
+  width: 1350px;
+  position: absolute;
+  margin-left: -625px;
+}
+
+.infoPopup-infoHolder {
+  position: relative;
+}
+
+.x-button {
+  position: absolute;
+  left: 1350px;
+  top: -55px;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.x-button:hover {
+  color: yellow;
+  transform: scale(1.1);
+}
+
+.infoText {
+  position: absolute;
+  opacity: 1;
+  top: -40px;
+  width: 875px;
+  left: -140px;
+  text-shadow: 3px 3px black;
+}
+
+.infoText ul {
+  padding: 12px;
+}
+
+.infoText span {
+  text-align: right;
+}
+
+.infoText-name {
+  font-size: 75px;
+  padding-bottom: 15px;
+  text-align: left;
+  min-width: 640px;
+}
+
+.infoText-line-item {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 30px;
+  padding: 5px;
+  display: flex;
+}
+
+.infoText-line-item span:first-child {
+  text-align: left;
+  color: #999999;
+}
+
+.infoText-line-item span:nth-child(2) {
+  text-align: right;
+  flex-grow: 1;
+}
+
+.infoPopup-image {
+  width: 58%;
+}
+
+.infoImage-container {
+  height: 57%;
+  margin-left: 670px;
+}
+
+.neo-popup-container {
+  position: absolute;
+  top: 100px;
+}

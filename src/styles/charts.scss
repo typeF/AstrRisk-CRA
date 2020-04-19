@@ -1,0 +1,156 @@
+.graph {
+  transform: rotateX(-57deg);
+}
+
+.axis {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+}
+
+.y-axis {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+}
+
+.toggle-danger-bar-button {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.radar-chart {
+  position: relative;
+  top: -55px;
+  left: 170px;
+}
+
+.radar-chart-toggle-danger-bar {
+  font-family: "Roboto Mono", monospace;
+  position: absolute;
+  top: 83%;
+  left: 30%;
+  animation: dangerPulse 0.75s linear alternate infinite;
+}
+
+@keyframes dangerPulse {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+#radar-chart-data-blob {
+  pointer-events: all;
+  fill: #4fd4fd;
+  animation: pulsate 4s infinite ease-in-out;
+  cursor: pointer;
+}
+
+@keyframes pulsate {
+  0% {
+    fill-opacity: 0.4;
+  }
+  50% {
+    fill-opacity: 0.7;
+  }
+  100% {
+    fill-opacity: 0.4;
+  }
+}
+
+.barchart-annual-data {
+  position: relative;
+  top: 380px;
+  left: 277px;
+}
+
+.radar-data-blob-fill:hover {
+  fill-opacity: 0.8;
+}
+
+.radar-data-blob {
+  transition: 200ms;
+  transition-timing-function: ease-in;
+}
+
+.heatmap {
+  position: relative;
+  left: -4%;
+  pointer-events: all;
+}
+
+.heatmap-axis {
+  font-family: "Roboto Mono", monospace;
+  fill: white;
+  text-anchor: end;
+}
+
+.heatmap-xAxis {
+  text-anchor: middle;
+}
+
+.heatmap-squares {
+  cursor: pointer;
+}
+
+.heatmap-legend-text {
+  text-anchor: middle;
+  font-family: "Roboto Mono", monospace;
+  fill: white;
+}
+
+.heatmap-tooltip {
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  position: absolute;
+  pointer-events: none;
+  font-family: "Roboto Mono", monospace;
+  color: black;
+}
+
+.heatmap-date {
+  position: absolute;
+  left: -79%;
+  top: -4%
+}
+
+.heatmap-date-text {
+  position: absolute;
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  color: white;
+  font-size: 68px;
+  width: 2300px;
+  left: -10%;
+}
+
+.heatmap-neo-count {
+  position: absolute;
+  font-family: "Roboto Mono", monospace;
+  font-size: 50px;
+  top: 71%;
+  right: 3%;
+  display: flex;
+}
+
+.heatmap-neo-count-title {
+  color: #999999;
+}
+
+.heatmap-neo-count-text .heatmap-neo-count-text {
+  font-family: "Roboto Mono", monospace;
+  font-size: 68px;
+  color: white;
+    text-align: right;
+  position: relative;
+  text-align: right;
+}
+
+.heatmap-neo-count-text {
+  text-align: right;
+  width: 80px;
+}
